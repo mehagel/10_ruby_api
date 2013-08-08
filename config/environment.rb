@@ -20,7 +20,7 @@ require "sinatra/reloader" if development?
 
 require 'erb'
 
-# require 'tumblr'
+require 'tumblr'
 
 # Some helper constants for path-centric logic
 APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
@@ -34,3 +34,18 @@ Dir[APP_ROOT.join('app', 'helpers', '*.rb')].each { |file| require file }
 # Set up the database and models
 require APP_ROOT.join('config', 'database')
 
+  consumer_key = 'usFmnLoytXNutq3iXRnGNnc5IIA1ZoD6pWHHURZYYpvtfgIdn4' 
+  consumer_secret = 'dNFCOYmd090jYM7LLOnJ3dJzRo19zsdOuMLAjSVVZx3XaVtddV'
+
+
+# env_config = YAML.load_file(APP_ROOT.join('config', 'tumblr.yaml'))
+
+# env_config.each do |key, value|
+#   ENV[key] = value 
+# end
+
+
+# Tumblr.configure do |config|
+#   config.consumer_key = ENV['TUMBLR_KEY']
+#   config.consumer_secret = ENV['TUMBLR_SECRET']
+# end

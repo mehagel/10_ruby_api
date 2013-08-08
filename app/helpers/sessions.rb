@@ -1,7 +1,7 @@
-# helpers do
+helpers do
 
-#   def current_user
-#     User.find(session[:user]) if session[:user]
-#   end
+  def current_user
+    User.find(session[:user]) if session[:user]
+  end
 
-# end
+end
