@@ -16,7 +16,7 @@ gem 'activerecord'
 gem 'rake'
 
 gem 'shotgun'
-gem 'tumblr'
+gem 'tumblr_client'
 
 group :test do
   gem 'faker'

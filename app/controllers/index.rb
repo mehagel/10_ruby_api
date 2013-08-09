@@ -5,10 +5,9 @@ get '/' do
   erb :index
 end
 
-get '/username' do
-
-  # @tweets = Tumblr.user_timeline(params[:name], count: params[:count])
-
-  erb :index
-  
+post '/get_tumblrs' do
+  @user_name = params[:username]
+  client = Tumblr::Client.new
+  @user = client.posts(@user_name +".tumblr.com").first[1]
+  erb :display_info
 end

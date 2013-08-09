@@ -1,0 +1,13 @@
+<div class='container'>
+
+  <h3>Here is the Tumblr info from'<%= @user.fetch('name') %>' user</h3>
+
+  <form method='get' action='/'>
+    <button>Return to Home</button>
+  </form><br/>
+  
+    <ul>
+      <li> Post: <%= @user.fetch('posts') %><br>
+           Description: <%= @user.fetch('description') %></li>
+      </ul>
+</div>
